@@ -126,7 +126,7 @@ vi /etc/pam.d/system-auth
 # add follows to the end (generate home directory if not)
 session     optional      pam_mkhomedir.so skel=/etc/skel umask=077 
 
-
+#authconfig --enablesssd --enablesssdauth --enablemkhomedir --update
 #/etc/rc.d/init.d/sssd start
 #chkconfig sssd on
 
