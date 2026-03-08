@@ -429,6 +429,26 @@ Press enter to see a dump of your service definitions
 [root@vm-1 ~]#
 
 
+Check SMB Protocol Supported by Samba
+---------------------------------------
+#smbd -V
+This shows the Samba version, which determines supported SMB protocols.
+
+Approximate mapping:
+
+Samba Version	     SMB Protocol
+Samba 3.x     	     SMB1
+Samba 4.x	          SMB2 / SMB3
+
+
+Check SMB Protocol Negotiation with Server
+-----------------------------------------------
+smbclient -L //windows-server -U administrator
+smbclient -L //windows-server -U administrator -d 3
+smbclient -L //windows-server -U administrator -m NT1
+smbclient -L //windows-server -U administrator -m SMB2
+smbclient -L //windows-server -U administrator -m SMB3
+
 ==================================================================================================================
 Important Reality
 ==========================
