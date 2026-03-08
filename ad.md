@@ -1,7 +1,9 @@
 
 
-#sevice iptables off
-#iptableds -F
+#sevice iptables stop
+#iptables -F
+
+#chkconfig iptables off
 
 
 #setenforce 0
